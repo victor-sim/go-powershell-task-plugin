@@ -1,0 +1,20 @@
+<div class="form_item_block">
+  <label>Error Action Preference:<span class="asterisk">*</span></label>
+  <select ng-model="errorAction" ng-required="true" >
+    <option value="Stop">Stop</option>
+    <option value="SilentlyContinue">SilentlyContinue</option>
+    <option value="Continue">Continue</option>
+    <option value="Ignore">Ignore</option>
+    <option value="Suspend">Suspend</option>
+    <option value="Inquire">Inquire</option>
+  </select>
+  <label>Script:<span class="asterisk">*</span></label>
+  <textarea ng-model="script" ng-required="true" rows="14" cols="60"></textarea>
+  <span class="form_error" ng-show="GOINPUTNAME[script].$error.server">{{ GOINPUTNAME[script].$error.server }}</span>
+  <span class="form_error" ng-show="GOINPUTNAME[cpuArch].$error.server">{{ GOINPUTNAME[cpuArch].$error.server }}</span>
+  <label>CPU Architecture:<span class="asterisk">*</span></label>
+  <select ng-model="cpuArch" ng-required="true" >
+    <option value="x86">x86</option>
+    <option value="x64">x64</option>
+  </select>
+</div>
